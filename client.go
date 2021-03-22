@@ -482,6 +482,10 @@ func (c *HelmClient) SetDebugLog(debugLog action.DebugLog) {
 	c.DebugLog = debugLog
 }
 
+func (c *HelmClient) GetActionConfig() *action.Configuration {
+	return c.ActionConfig
+}
+
 // upgradeCRDs upgrades the CRDs of the provided chart
 func (c *HelmClient) upgradeCRDs(ctx context.Context, chartInstance *chart.Chart) error {
 	cfg, err := c.Settings.RESTClientGetter().ToRESTConfig()
