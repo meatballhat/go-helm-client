@@ -18,4 +18,5 @@ type Client interface {
 	TemplateChart(spec *ChartSpec) ([]byte, error)
 	LintChart(spec *ChartSpec) error
 	SetDebugLog(debugLog action.DebugLog)
+	GetActionConfig() *action.Configuration
 }

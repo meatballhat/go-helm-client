@@ -146,3 +146,17 @@ func (mr *MockClientMockRecorder) SetDebugLog(debugLog interface{}) *gomock.Call
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetDebugLog", reflect.TypeOf((*MockClient)(nil).SetDebugLog), debugLog)
 }
+
+// GetActionConfig mocks base method
+func (m *MockClient) GetActionConfig() *action.Configuration {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetActionConfig")
+	ret0, _ := ret[0].(*action.Configuration)
+	return ret0
+}
+
+// GetActionConfig indicates an expected call of GetActionConfig
+func (mr *MockClientMockRecorder) GetActionConfig() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetActionConfig", reflect.TypeOf((*MockClient)(nil).GetActionConfig))
+}
